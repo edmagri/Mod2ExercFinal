@@ -1,6 +1,6 @@
-package br.com.gumga.academia;
+package br.com.gumga.academia.entidades;
 
-import br.com.gumga.academia.entidade.jpa.JpaUtil;
+import br.com.gumga.academia.entidades.jpa.JpaUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 

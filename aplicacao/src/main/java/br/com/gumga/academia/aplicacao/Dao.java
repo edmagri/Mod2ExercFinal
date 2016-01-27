@@ -1,6 +1,7 @@
-package br.com.gumga.academia;
+package br.com.gumga.academia.aplicacao;
 
-import br.com.gumga.academia.entidade.jpa.JpaUtil;
+import br.com.gumga.academia.entidades.Cliente;
+import br.com.gumga.academia.entidades.jpa.JpaUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -27,8 +28,7 @@ public class Dao<T> {
         
         manager.persist(c);         
         tx.commit();         
-        manager.close();         
-        JpaUtil.close();                
+        manager.close();                        
     }
     
     public void excluir(T entidade) {
@@ -40,18 +40,17 @@ public class Dao<T> {
         
         manager.remove(manager.merge(entidade));         
         tx.commit();         
-        manager.close();         
-        JpaUtil.close();                
+        manager.close();                      
     }
 
-    List<Cliente> buscaTodos() {
+    public List<Cliente> buscaTodos() {
         EntityManager manager = JpaUtil.getEntityManager();
         List<T> result = manager.createQuery("Select t From "+classePersistente.getName()+" t").getResultList();
         manager.close();
         return (List<Cliente>) result;
     }
 
-    Cliente buscaPorId(Long aLong) {
+    public Cliente buscaPorId(Long id) {
         EntityManager manager = JpaUtil.getEntityManager();
         T result = (T) manager.find(classePersistente, id);
         manager.close();

@@ -1,4 +1,4 @@
-package br.com.gumga.academia;
+package br.com.gumga.academia.entidades;
 
 import java.util.ArrayList;
 import java.util.Date;

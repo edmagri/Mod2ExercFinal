@@ -1,4 +1,4 @@
-package br.com.gumga.academia;
+package br.com.gumga.academia.entidades;
 
 
 import java.util.Date;
@@ -35,7 +35,7 @@ public class Cliente {
         this.nome = nome;
     }    
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -54,6 +54,10 @@ public class Cliente {
     public void setCada_cad(Date cada_cad) {
         this.dataCadastro = cada_cad;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "id=" + id + ", nome=" + nome + ", dataCadastro=" + dataCadastro + '}';
+    }
     
 }

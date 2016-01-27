@@ -1,0 +1,3 @@
+/*C3*/SET SCHEMA PUBLIC
+alter table Pedido_ItemPedido drop constraint UK_l367dsr6wte3s68n89hl8bbnm
+alter table Pedido_ItemPedido add constraint UK_l367dsr6wte3s68n89hl8bbnm unique (itens_id)

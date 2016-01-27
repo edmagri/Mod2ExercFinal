@@ -1,4 +1,4 @@
-package br.com.gumga.academia;
+package br.com.gumga.academia.entidades;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,6 +1,7 @@
-package br.com.gumga.academia;
+package br.com.gumga.academia.aplicacao;
 
-import br.com.gumga.academia.entidade.jpa.JpaUtil;
+import br.com.gumga.academia.entidades.Cliente;
+import br.com.gumga.academia.entidades.jpa.JpaUtil;
 import java.util.List;
 
 public class App 

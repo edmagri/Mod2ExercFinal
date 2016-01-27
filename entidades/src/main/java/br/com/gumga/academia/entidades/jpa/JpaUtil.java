@@ -1,4 +1,4 @@
-package br.com.gumga.academia.entidade.jpa;
+package br.com.gumga.academia.entidades.jpa;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
